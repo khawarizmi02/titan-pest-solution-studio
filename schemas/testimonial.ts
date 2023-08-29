@@ -16,13 +16,13 @@ export default defineType({
 
     defineField({
       name: 'title',
-      title: 'Title',
+      title: 'Title (Who?)',
       type: 'string',
     }),
     
     defineField({
       name: 'image',
-      title: 'Image',
+      title: 'Person Image',
       type: 'image',
       options: {
         hotspot: true,
