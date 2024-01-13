@@ -1,19 +1,27 @@
-import { defineField, defineType } from "sanity";
+import {defineField, defineType} from 'sanity'
 
 export default defineType({
-
   name: 'services',
   title: 'Services',
   type: 'document',
 
-  fields : [
-    
+  fields: [
     defineField({
       name: 'name',
-      title: 'Pest Name',
+      title: 'Service Name',
       type: 'string',
     }),
-    
+
+    defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'name',
+        maxLength: 96,
+      },
+    }),
+
     defineField({
       name: 'image',
       title: 'Pest Image',
@@ -28,7 +36,7 @@ export default defineType({
       title: 'Introduction',
       type: 'text',
     }),
-    
+
     defineField({
       name: 'servicesMethod',
       title: 'Services Method',
@@ -45,7 +53,7 @@ export default defineType({
               type: 'image',
               options: {
                 hotspot: true,
-              }
+              },
             },
             {
               name: 'methodName',
@@ -57,10 +65,9 @@ export default defineType({
               title: 'Method Description',
               type: 'text',
             },
-          ]
-        }
-      ]
+          ],
+        },
+      ],
     }),
-  ]
+  ],
 })
-

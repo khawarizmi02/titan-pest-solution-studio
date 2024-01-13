@@ -15,7 +15,7 @@ export default defineType({
       name: 'introduction',
       title: 'Introduction',
       type: 'array',
-      of: [{type: 'block'}] as any,
+      of: [{type: 'block'}],
     }),
 
     defineField({
