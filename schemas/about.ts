@@ -1,13 +1,11 @@
-import { defineField, defineType } from "sanity";
+import {defineField, defineType} from 'sanity'
 
 export default defineType({
-
   name: 'about',
   title: 'About Us',
   type: 'document',
 
-  fields : [
-    
+  fields: [
     defineField({
       name: 'introduction',
       title: 'Introduction',
@@ -15,15 +13,40 @@ export default defineType({
     }),
 
     defineField({
+      name: 'introImage',
+      title: 'Introduction Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+
+    defineField({
       name: 'vision',
       title: 'Vision',
       type: 'text',
     }),
-    
+
     defineField({
       name: 'mission',
       title: 'Mission',
       type: 'text',
+    }),
+
+    defineField({
+      name: 'value',
+      title: 'Value',
+      type: 'array',
+      of: [{type: 'block'}],
+    }),
+
+    defineField({
+      name: 'image',
+      title: 'Page Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
     }),
 
     defineField({
@@ -47,11 +70,11 @@ export default defineType({
               type: 'image',
               options: {
                 hotspot: true,
-              }
+              },
             },
-          ]
-        }
-      ]
-    })
-  ]
+          ],
+        },
+      ],
+    }),
+  ],
 })

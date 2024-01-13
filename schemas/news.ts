@@ -1,22 +1,20 @@
-import { defineField, defineType } from "sanity";
+import {defineField, defineType} from 'sanity'
 
 export default defineType({
-
   name: 'news',
   title: 'News & Tips',
   type: 'document',
-  
-  fields: [
 
+  fields: [
     defineField({
       name: 'image',
       title: 'Page Image',
       type: 'image',
       options: {
         hotspot: true,
-      }
+      },
     }),
-    
+
     defineField({
       name: 'releaseDate',
       title: 'Release Date',
@@ -31,6 +29,16 @@ export default defineType({
       name: 'topic',
       title: 'Topic',
       type: 'string',
+    }),
+
+    defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'topic',
+        maxLength: 96,
+      },
     }),
 
     defineField({
@@ -52,11 +60,11 @@ export default defineType({
               name: 'subtopicDescription',
               title: 'Subtopic Description',
               type: 'array',
-              of: [{ type: 'block' }],
+              of: [{type: 'block'}],
             },
-          ]
-        }
-      ]
+          ],
+        },
+      ],
     }),
-  ]
+  ],
 })
