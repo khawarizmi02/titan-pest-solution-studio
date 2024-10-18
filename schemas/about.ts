@@ -41,6 +41,39 @@ export default defineType({
     }),
 
     defineField({
+      name: 'values',
+      title: 'Values',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          name: 'value',
+          title: 'Value',
+          fields: [
+            {
+              name: 'valueName',
+              title: 'Value Name',
+              type: 'string',
+            },
+            {
+              name: 'valueImage',
+              title: 'Value Image',
+              type: 'image',
+              options: {
+                hotspot: true,
+              },
+            },
+            {
+              name: 'valueText',
+              title: 'Value Text',
+              type: 'text',
+            },
+          ],
+        },
+      ],
+    }),
+
+    defineField({
       name: 'image',
       title: 'Page Image',
       type: 'image',

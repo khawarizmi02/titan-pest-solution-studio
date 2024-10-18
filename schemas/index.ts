@@ -9,8 +9,10 @@ import library from './library'
 import libraryintro from './libraryIntro'
 import news from './news'
 import newsIntro from './newsIntro'
+import home from './home'
 
 export const schemaTypes = [
+  home,
   contact,
   testimonial,
   Services,
@@ -23,6 +25,7 @@ export const schemaTypes = [
 ]
 export const schema: {types: SchemaTypeDefinition[]} = {
   types: [
+    home,
     contact,
     testimonial,
     Services,
