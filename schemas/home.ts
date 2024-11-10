@@ -7,18 +7,24 @@ export default defineType({
 
   fields: [
     defineField({
-      name: 'heroImage',
-      title: 'Hero Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      name: 'tagLine',
+      title: 'Tag Line',
+      type: 'text',
     }),
 
     defineField({
       name: 'heroText',
       title: 'Hero Text',
       type: 'text',
+    }),
+
+    defineField({
+      name: 'heroImage',
+      title: 'Hero Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
     }),
 
     defineField({
@@ -60,33 +66,11 @@ export default defineType({
         },
       ],
     }),
-
-    // defineField({
-    // 	name: 'services',
-    // 	title: 'Services',
-    // 	type: 'array',
-    // 	of: [{type: 'reference', to: [{type: 'Services'}]}],
-    // }),
-
-    // defineField({
-    // 	name: 'library',
-    // 	title: 'Library',
-    // 	type: 'array',
-    // 	of: [{type: 'reference', to: [{type: 'library'}]}],
-    // }),
-
-    // defineField({
-    // 	name: 'news',
-    // 	title: 'News',
-    // 	type: 'array',
-    // 	of: [{type: 'reference', to: [{type: 'news'}]}],
-    // }),
-
-    // defineField({
-    // 	name: 'testimonials',
-    // 	title: 'Testimonials',
-    // 	type: 'array',
-    // 	of: [{type: 'reference', to: [{type: 'testimonial'}]}],
-    // }),
   ],
+
+  preview: {
+    select: {
+      title: 'tagLine',
+    },
+  },
 })
