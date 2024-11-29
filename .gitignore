@@ -33,3 +33,6 @@ mux-Development.env
 mux-Production.env
 
 /upload-vids
+
+# .env files
+.env

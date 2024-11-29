@@ -7,8 +7,13 @@ export default defineConfig({
   name: 'default',
   title: 'titan-pest-solution-studio',
 
-  projectId: 'wa5p7wfh',
-  dataset: 'production',
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID || '',
+  dataset: process.env.SANITY_STUDIO_DATASET || '',
+
+  basePath: '/studio',
+  // Add custom domain
+  hostname: 'studio.titanpestsolution.com',
+  studioHost: 'titan-pest-solution-studio',
 
   plugins: [deskTool(), visionTool()],
 
