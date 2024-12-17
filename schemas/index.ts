@@ -10,10 +10,12 @@ import libraryintro from './libraryIntro'
 import news from './news'
 import newsIntro from './newsIntro'
 import home from './home'
+import addresses from './addresses'
 
 export const schemaTypes = [
   home,
   contact,
+  addresses,
   testimonial,
   Services,
   serviceIntro,
@@ -27,6 +29,7 @@ export const schema: {types: SchemaTypeDefinition[]} = {
   types: [
     home,
     contact,
+    addresses,
     testimonial,
     Services,
     serviceIntro,
