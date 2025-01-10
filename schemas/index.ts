@@ -11,11 +11,13 @@ import news from './news'
 import newsIntro from './newsIntro'
 import home from './home'
 import addresses from './addresses'
+import areaCover from './areaCover'
 
 export const schemaTypes = [
   home,
   contact,
   addresses,
+	areaCover,
   testimonial,
   Services,
   serviceIntro,
@@ -30,6 +32,7 @@ export const schema: {types: SchemaTypeDefinition[]} = {
     home,
     contact,
     addresses,
+		areaCover,
     testimonial,
     Services,
     serviceIntro,

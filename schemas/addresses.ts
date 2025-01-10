@@ -12,6 +12,12 @@ export default defineType({
       type: 'string',
     }),
 
+		defineField({
+			name: 'branch',
+			title: 'Branch',
+			type: 'string',
+		}),
+
     defineField({
       name: 'address',
       title: 'Address',
